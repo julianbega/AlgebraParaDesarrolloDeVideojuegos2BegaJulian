@@ -13,10 +13,12 @@ public class Tester : MonoBehaviour
         vectors.Add(new Vec3(10.0f, 10.0f, 0.0f));
         vectors.Add(new Vec3(20.0f, 10.0f, 0.0f));
         vectors.Add(new Vec3(20.0f, 20.0f, 0.0f));
-        VectorDebugger.AddVectorsSecuence(vectors, false, Color.red, "secuencia");
-        VectorDebugger.AddVector(new Vector3(10, 10, 0), Color.blue, "elAzul");
-        VectorDebugger.AddVector(Vector3.down * 7, Color.green, "elVerde");
-        VectorDebugger.EnableEditorView();
+        //VectorDebugger.AddVectorsSecuence(vectors, false, Color.red, "secuencia");
+        //VectorDebugger.AddVector(new Vector3(10, 10, 0), Color.blue, "elAzul");
+        //VectorDebugger.AddVector(Vector3.down * 7, Color.green, "elVerde");
+        //VectorDebugger.AddVector(new Vec3(VectorDebugger.GetVectorsPositions("secuencia")[3] - VectorDebugger.GetVectorsPositions("secuencia")[1]), Color.cyan, "elPrimero");
+        VectorDebugger.AddVector(new Vec3(new Vec3(10.0f,0.0f,0.0f)*2), Color.yellow, "elSegundo");
+        VectorDebugger.EnableEditorView();  
     }
 
     // Update is called once per frame
@@ -24,11 +26,11 @@ public class Tester : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.O))
         {
-            VectorDebugger.TurnOffVector("elAzul");
+           // VectorDebugger.TurnOffVector("elAzul");
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            VectorDebugger.TurnOnVector("elAzul");
+            //VectorDebugger.TurnOnVector("elAzul");
         }
     }
 }
